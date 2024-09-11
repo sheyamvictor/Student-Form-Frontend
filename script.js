@@ -79,7 +79,7 @@ const editRow = (clickIndex) => {
     document.getElementById("regnum").value = regnum
 
     editIndex = clickIndex
-    saveBtn.textContent = "Edit" // Change button text to "Edit" during editing
+    saveBtn.textContent = "Edited..." // Change button text to "Edit" during editing
 }
 
 // Update Row in the Table
