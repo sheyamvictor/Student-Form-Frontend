@@ -1,6 +1,6 @@
 const form = document.getElementById("userForm")
 const table = document.getElementById("tableData").getElementsByTagName("tbody")[0]
-const submitBtn = document.getElementById("submitBtn") 
+const saveBtn = document.getElementById("saveBtn") 
 
 let editIndex = null
 
@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
         saveToLocalStorage(name, gender, dob, department, regnum) // Save new row to localStorage
     } else {
         updateRow(editIndex, name, gender, dob, department, regnum)
-        submitBtn.textContent = "Save" // Change button text back to "Save" after editing
+        saveBtn.textContent = "Save" // Change button text back to "Save" after editing
         updateLocalStorage(editIndex, name, gender, dob, department, regnum) // Update localStorage after editing
     }
 
@@ -79,7 +79,7 @@ const editRow = (clickIndex) => {
     document.getElementById("regnum").value = regnum
 
     editIndex = clickIndex
-    submitBtn.textContent = "Edit" // Change button text to "Edit" during editing
+    saveBtn.textContent = "Edit" // Change button text to "Edit" during editing
 }
 
 // Update Row in the Table
